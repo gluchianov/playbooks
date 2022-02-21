@@ -1,0 +1,9 @@
+  - name: Check Docker Ct Status
+    hosts: rhel
+    tasks:
+      - name: Execute the Docker command over Command module
+        register: docker-ct-uptime
+        command: "docker ps"
+
+      - debug:
+          var: docker-ct-uptime.stdout_lines
