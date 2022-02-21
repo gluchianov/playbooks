@@ -1,4 +1,4 @@
  - name: check installed pkg
     hosts: rhel
     tasks:
-       ommand: "rpm -q katello-host-tools katello-host-tools-tracer katello-ca-consumer-latest"
+      command: "rpm -q katello-host-tools katello-host-tools-tracer katello-ca-consumer-latest"
