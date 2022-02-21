@@ -1,7 +1,6 @@
   tasks:
     - name: get hostname
       command: /bin/hostname
-      changed_when: False
       register: hostname
 
     - name: get uptime
