@@ -1,5 +1,5 @@
   - name: uptime
-    hosts: all
+    hosts: rhel
     tasks:
       - name: Execute the Uptime command over Command module
         command: "uptime"
