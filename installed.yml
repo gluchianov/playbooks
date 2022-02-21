@@ -1,9 +1,9 @@
-  - name: Check the remote host Hostname, Version, Distribution with UNAME
+  - name: check pkg installed for satellite
     hosts: rhel
     tasks:
-      - name: Execute the UNAME command
-        register: unameout
-        command: "uname -a"
+      - name: Execute the pkg command check
+        register: kgsatellite
+        command: "katello-host-tools katello-host-tools-tracer katello-ca-consumer-latest"
 
       - debug:
-          var: unameout.stdout_lines
+          var: kgsatellite.stdout_lines
