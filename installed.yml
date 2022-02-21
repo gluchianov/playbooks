@@ -1,4 +1,4 @@
-- name: uptime
+- name: check rpm installed
     hosts: all
     tasks:
       - name: Execute the rpm command over Command module
