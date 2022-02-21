@@ -1,5 +1,5 @@
 - name: uptime
-    hosts: rhel
+    hosts: all
     tasks:
       - name: Execute the rpm command over Command module
         command: "rpm -q katello-host-tools katello-host-tools-tracer katello-ca-consumer-latest"
