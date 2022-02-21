@@ -1,4 +1,6 @@
 -name: uptime Hosts
+hosts: all
 tasks:
 - name: Get uptime first
 shell: uptime
+
