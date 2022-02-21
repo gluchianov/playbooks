@@ -1,5 +1,5 @@
 - name: check rpm installed
-    hosts: all
+    hosts: rhel
     tasks:
       - name: Execute the rpm command over Command module
         command: "uname -a"
