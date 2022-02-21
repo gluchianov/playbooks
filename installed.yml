@@ -3,7 +3,7 @@
     tasks:
       - name: Execute the pkg command check
         register: kgsatellite
-        command: "rpm -q katello-host-tools katello-host-tools-tracer katello-ca-consumer-latest"
+        command: "rpm -q katello-host-tools katello-host-tools-tracer"
 
       - debug:
           var: kgsatellite.stdout_lines
