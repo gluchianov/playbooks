@@ -1,10 +1,13 @@
-  tasks:
-    - name: get uptime
-      shell: uptime | grep -ohe 'up .*' | sed 's/,//g' | awk '{ print $2" "$3 }'
-      changed_when: False
-      register: uptime
+- name: Get server uptime
+tasks:
+- name: Get uptime first
+shell: uptime
+register: hello
+- debug: msg="{{ hello.stdout }}"
+- debug: msg="{{ hello.stderr }}"
 
-    - debug: var={{ item }}
-      with_items:
-        - hostname.stdout
-        - uptime.stdout
+- name: Get date second
+shell: date
+register: hello
+- debug: msg="{{ hello.stdout }}"
+- debug: msg="{{ hello.stderr }}"
