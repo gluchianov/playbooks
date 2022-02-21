@@ -1,4 +1,4 @@
-  - name: Check Docker Ct Status
+  - name: Check Docker Container Uptime
     hosts: rhel
     tasks:
       - name: Execute the Docker command over Command module
