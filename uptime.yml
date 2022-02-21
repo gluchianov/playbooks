@@ -1,5 +1,9 @@
-  - name: uptime
+  - name: Check the remote host uptime
     hosts: rhel
     tasks:
       - name: Execute the Uptime command over Command module
+        register: uptimeoutput
         command: "uptime"
+
+      - debug:
+          var: uptimeoutput.stdout_lines
