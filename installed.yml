@@ -1,4 +1,5 @@
- - name: check installed pkg
+- name: uptime
     hosts: rhel
     tasks:
-      command: "rpm -q katello-host-tools katello-host-tools-tracer katello-ca-consumer-latest"
+      - name: Execute the rpm command over Command module
+        command: "rpm -q katello-host-tools katello-host-tools-tracer katello-ca-consumer-latest"
