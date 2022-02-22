@@ -1,2 +1,0 @@
-- name: Write new instance host key to known hosts
-    shell: "ssh-keyscan -H {{ inventory_hostname }} >> ~/.ssh/known_hosts"
