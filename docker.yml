@@ -1,5 +1,5 @@
   - name: Check Docker Container Uptime
-    hosts: rhel
+    hosts: all
     tasks:
       - name: Execute the Docker command over Command module
         register: dockeroutput
