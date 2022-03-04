@@ -1,4 +1,5 @@
   - name: check pkg installed for satellite
+    hosts: all
     tasks:
       - name: Execute the pkg command check
         register: kgsatellite
