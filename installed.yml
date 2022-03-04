@@ -1,5 +1,4 @@
   - name: check pkg installed for satellite
-    hosts: rhel
     tasks:
       - name: Execute the pkg command check
         register: kgsatellite
