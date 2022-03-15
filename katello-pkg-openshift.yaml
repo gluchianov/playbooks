@@ -1,0 +1,1 @@
+yum install katello-host-tools katello-agent katello-host-tools-tracer -y  --nogpgcheck
