@@ -1,1 +1,9 @@
-yum install katello-host-tools katello-agent katello-host-tools-tracer -y  --nogpgcheck
+  - name: Install the remote host Package Katello for Satellite
+    hosts: all
+    tasks:
+      - name: Execute the install command over Command module
+        register: installoutput
+        command: "yum install katello-host-tools katello-agent katello-host-tools-tracer -y  --nogpgcheck"
+
+      - debug:
+          var: installoutput.stdout_lines
