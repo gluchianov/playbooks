@@ -1,0 +1,9 @@
+  - name: Check the remote host space
+    hosts: all
+    tasks:
+      - name: Execute the Uptime command over Command module
+        register: spaceoutput
+        command: "df -h"
+
+      - debug:
+          var: spaceoutput.stdout_lines
