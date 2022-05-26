@@ -1,7 +1,4 @@
  - name: run ssh-keyscan to add keys to known_hosts
    hosts: all
    tasks:
-   gather_facts: no
-   sudo: no
-   tasks:
    local_action: shell ssh-keyscan {{ ansible_ssh_host }} >> ~/.ssh/known_hosts
